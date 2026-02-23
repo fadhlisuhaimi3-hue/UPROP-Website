@@ -1,0 +1,626 @@
+/* =========================================
+   JTMK PSP - Main Stylesheet
+   Politeknik Seberang Perai
+   ========================================= */
+
+/* CSS Variables - Design Tokens */
+:root {
+    /* Colors */
+    --primary-dark: #014f55;
+    --primary-blue: #1e3a8a;
+    --primary-light: #3b82f6;
+    --secondary-dark: #00000059;
+    --warning-color: #ffc107;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --text-white: #ffffff;
+    --text-dark: #212529;
+    --text-muted: #6c757d;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    --gradient-dark: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    --gradient-warning: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 10px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 15px rgba(0,0,0,0.12);
+    --shadow-lg: 0 8px 25px rgba(0,0,0,0.15);
+    
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+    --radius-full: 50%;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+}
+
+/* =========================================
+   Base Styles
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* =========================================
+   Navigation & Header
+   ========================================= */
+.navbar {
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text-white) !important;
+}
+
+.navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-name {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 5px;
+    color: rgba(255,255,255,0.9) !important;
+    transition: all var(--transition-base);
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--warning-color) !important;
+    background: rgba(255,255,255,0.1);
+}
+
+.navbar-toggler {
+    border: none;
+    padding: var(--spacing-sm);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* =========================================
+   Hero Section
+   ========================================= */
+.hero-section {
+    background: var(--gradient-primary);
+    color: var(--text-white);
+    padding: var(--spacing-2xl) 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.hero-section .lead {
+    opacity: 0.95;
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* =========================================
+   Card Components
+   ========================================= */
+.card {
+    border: none;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-md);
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-header {
+    background: var(--gradient-dark);
+    color: var(--text-white);
+    font-weight: 600;
+    border: none;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-md) var(--radius-md) 0 0 !important;
+}
+
+.card-header.bg-dark {
+    background: var(--gradient-dark) !important;
+}
+
+.card-body {
+    padding: var(--spacing-lg);
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-blue);
+}
+
+/* =========================================
+   Sidebar & Dashboard
+   ========================================= */
+.dashboard-sidebar {
+    position: sticky;
+    top: var(--spacing-lg);
+}
+
+.list-group-item {
+    border: none;
+    padding: var(--spacing-md) var(--spacing-lg);
+    transition: all var(--transition-base);
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.list-group-item-action:hover {
+    background-color: #e3f2fd;
+    padding-left: calc(var(--spacing-lg) + 5px);
+    color: var(--primary-blue);
+}
+
+.list-group-item-action.active {
+    background: var(--gradient-primary);
+    color: var(--text-white) !important;
+    border: none;
+}
+
+.list-group-item i {
+    width: 20px;
+    text-align: center;
+}
+
+/* =========================================
+   Statistics Cards
+   ========================================= */
+.stat-card {
+    background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-light) 100%);
+    border-left: 4px solid var(--warning-color);
+    padding: var(--spacing-lg);
+    text-align: center;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-sm);
+    transition: transform var(--transition-base);
+}
+
+.stat-card:hover {
+    transform: translateX(5px);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    display: block;
+    line-height: 1;
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* =========================================
+   Feature Boxes
+   ========================================= */
+.feature-box {
+    background: var(--bg-white);
+    border-left: 4px solid var(--primary-blue);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    height: 100%;
+    transition: all var(--transition-base);
+}
+
+.feature-box:hover {
+    background: var(--bg-light);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-white);
+    font-size: 1.5rem;
+}
+
+.feature-title {
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+.feature-text {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* =========================================
+   Info Boxes
+   ========================================= */
+.info-box {
+    background: var(--bg-white);
+    border-left: 4px solid var(--warning-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-md);
+    transition: all var(--transition-base);
+}
+
+.info-box:hover {
+    background: var(--bg-light);
+    transform: translateX(5px);
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-warning);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+}
+
+/* =========================================
+   Contact Section
+   ========================================= */
+.contact-info-box {
+    background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-light) 100%);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xl);
+    text-align: center;
+    transition: all var(--transition-base);
+    height: 100%;
+}
+
+.contact-info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    font-size: 1.75rem;
+    margin: 0 auto var(--spacing-md);
+}
+
+/* =========================================
+   Team Cards
+   ========================================= */
+.team-card {
+    background-color: var(--primary-dark);
+    border: none;
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-base);
+    height: 100%;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-card .card-title {
+    color: var(--text-white);
+}
+
+.team-card .card-text {
+    color: rgba(255,255,255,0.9);
+}
+
+/* =========================================
+   Forms
+   ========================================= */
+.form-control,
+.form-select {
+    border: 2px solid #e9ecef;
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    transition: all var(--transition-fast);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* =========================================
+   Buttons
+   ========================================= */
+.btn-primary {
+    background: var(--gradient-primary);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-xl);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline-warning {
+    border-color: var(--warning-color);
+    color: var(--warning-color);
+    font-weight: 500;
+}
+
+.btn-outline-warning:hover {
+    background-color: var(--warning-color);
+    color: var(--text-dark);
+}
+
+/* =========================================
+   Progress Bars
+   ========================================= */
+.progress {
+    background-color: var(--secondary-dark);
+    border-radius: var(--radius-md);
+    height: 25px;
+}
+
+.progress-bar.bg-warning {
+    background: var(--gradient-warning) !important;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* =========================================
+   Alerts & Badges
+   ========================================= */
+.alert-custom {
+    background-color: var(--secondary-dark);
+    border-left: 4px solid var(--warning-color);
+    color: var(--text-white);
+}
+
+.badge {
+    font-weight: 500;
+    padding: 0.5em 0.75em;
+}
+
+.badge.bg-warning.text-dark {
+    color: var(--text-dark) !important;
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+footer {
+    background: var(--gradient-dark);
+    color: var(--text-white);
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+    margin-top: var(--spacing-2xl);
+}
+
+footer h5 {
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-white);
+}
+
+footer p,
+footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+footer a:hover {
+    color: var(--warning-color);
+}
+
+footer hr {
+    border-color: rgba(255,255,255,0.1);
+}
+
+footer .text-muted {
+    color: rgba(255,255,255,0.7) !important;
+}
+
+/* =========================================
+   Utility Classes
+   ========================================= */
+.bg-semi-dark {
+    background-color: var(--secondary-dark);
+}
+
+.text-warning-custom {
+    color: var(--warning-color);
+}
+
+/* =========================================
+   Responsive Design
+   ========================================= */
+@media (max-width: 991px) {
+    .dashboard-sidebar {
+        position: static;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .hero-section {
+        padding: var(--spacing-xl) 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background: var(--gradient-primary);
+        padding: var(--spacing-md);
+        border-radius: var(--radius-md);
+        margin-top: var(--spacing-sm);
+    }
+    
+    .nav-link {
+        padding: var(--spacing-sm) var(--spacing-md);
+        border-radius: var(--radius-sm);
+    }
+    
+    .feature-box,
+    .contact-info-box,
+    .stat-card {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .card-body {
+        padding: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .contact-icon,
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+}
+
+/* =========================================
+   Animations
+   ========================================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.4s ease-out;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+
+/* =========================================
+   Accessibility
+   ========================================= */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+.form-control:focus-visible,
+.form-select:focus-visible {
+    outline: 3px solid var(--warning-color);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-blue: #000080;
+        --text-dark: #000000;
+        --text-muted: #333333;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    footer,
+    .dashboard-sidebar {
+        display: none;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}

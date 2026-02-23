@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JTMK PSP - Jabatan Teknologi Maklumat dan Komunikasi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Custom styles for the header to match your design */
+        .navbar-custom {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            padding: 15px 0;
+        }
+        
+        .navbar-brand-custom {
+            display: flex;
+            align-items: center;
+            color: white !important;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        /* UPDATED: Logo image styles */
+        .navbar-brand-custom .logo-icon {
+            margin-right: 10px;
+        }
+        
+        .navbar-brand-custom .logo-icon img {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+        
+        .nav-link-custom {
+            color: rgba(255, 255, 255, 0.85) !important;
+            font-weight: 500;
+            padding: 8px 15px !important;
+            transition: all 0.3s;
+        }
+        
+        .nav-link-custom:hover,
+        .nav-link-custom.active {
+            color: #ffc107 !important;
+        }
+        
+        .hero-section-custom {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+        
+        .hero-description {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Responsive logo */
+        @media (max-width: 768px) {
+            .navbar-brand-custom .logo-icon img {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER: Navigation Bar (Matching your design) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <!-- Left: Logo + Site Name -->
+                <a class="navbar-brand-custom" href="index.html">
+                    <span class="logo-icon">
+                        <!-- CHANGED: Icon replaced with image -->
+                        <img src="C:\Users\Fadhli\Downloads\UPROP_Website\poli.png" alt="JTMK PSP Logo">
+                    </span>
+                    <span>JTMK PSP</span>
+                </a>
+                
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars" style="color: white;"></i>
+                </button>
+                
+                <!-- Right: Navigation Links -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-custom active" href="index.html">
+                                <i class="fas fa-home me-1"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-custom" href="about.html">
+                                <i class="fas fa-building me-1"></i> About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-custom" href="info.html">
+                                <i class="fas fa-info-circle me-1"></i> Info
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-custom" href="contact.html">
+                                <i class="fas fa-envelope me-1"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section (Matching your design) -->
+        <section class="hero-section-custom">
+            <div class="container">
+                <h1 class="hero-title">
+                    <i class="fas fa-university me-2"></i>Jabatan Teknologi Maklumat dan Komunikasi
+                </h1>
+                <h2 class="hero-subtitle">Politeknik Seberang Perai</h2>
+                <p class="hero-description">
+                    Bertanggungjawab untuk menyokong pembangunan dan penggunaan teknologi dalam organisasi
+                </p>
+            </div>
+        </section>
+    </header>
+
+    <!-- MAIN CONTENT AREA (Following wireframe) -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- SIDEBAR: Quick Links -->
+                <aside class="col-lg-3 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-dark text-white">
+                            <i class="fas fa-th-large me-2"></i><strong>Dashboard</strong>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <a href="index.html" class="list-group-item list-group-item-action active">
+                                <i class="fas fa-home me-2"></i>Home
+                            </a>
+                            <a href="about.html" class="list-group-item list-group-item-action">
+                                <i class="fas fa-building me-2"></i>About
+                            </a>
+                            <a href="info.html" class="list-group-item list-group-item-action">
+                                <i class="fas fa-info-circle me-2"></i>Info
+                            </a>
+                            <a href="contact.html" class="list-group-item list-group-item-action">
+                                <i class="fas fa-envelope me-2"></i>Contact
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="card shadow-sm mt-3">
+                        <div class="card-header bg-dark text-white">
+                            <i class="fas fa-chart-line me-2"></i><strong>Statistik Pantas</strong>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center mb-3 p-3 bg-light rounded">
+                                <h3 class="text-primary mb-0">500+</h3>
+                                <small class="text-muted">Pelajar Aktif</small>
+                            </div>
+                            <div class="text-center mb-3 p-3 bg-light rounded">
+                                <h3 class="text-primary mb-0">50+</h3>
+                                <small class="text-muted">Projek Tahunan</small>
+                            </div>
+                            <div class="text-center p-3 bg-light rounded">
+                                <h3 class="text-primary mb-0">30+</h3>
+                                <small class="text-muted">Pensyarah</small>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- MAIN CONTENT -->
+                <div class="col-lg-9">
+                    <!-- INFO: Maklumat Pelaksanaan Projek Pelajar -->
+                    <section class="card shadow-sm mb-4">
+                        <div class="card-header bg-dark text-white">
+                            <i class="fas fa-graduation-cap me-2"></i>Pelaksanaan Kursus Projek Akhir
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-primary mb-3">
+                                Maklumat Pelaksanaan Projek Pelajar
+                            </h5>
+                            <p class="card-text mb-4">
+                                Pelaksanaan kursus Projek Akhir berfungsi sebagai platform untuk pelajar 
+                                meningkatkan keupayaan penyelesaian masalah secara kreatif dan kolaboratif. 
+                                Kursus ini direka untuk melahirkan graduan yang kompeten, berdaya saing 
+                                dan mempunyai kebolehpasaran tinggi.
+                            </p>
+                            
+                            <!-- Feature Cards Grid -->
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="feature-box h-100">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-lightbulb"></i>
+                                        </div>
+                                        <h6 class="feature-title">Pemikiran Kritis</h6>
+                                        <p class="feature-text mb-0">
+                                            Meningkatkan keupayaan penyelesaian masalah secara kreatif dan kolaboratif
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-box h-100">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <h6 class="feature-title">Kerja Berpasukan</h6>
+                                        <p class="feature-text mb-0">
+                                            Membangun kemahiran kerjasama dan komunikasi dalam pasukan
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- TWO INFO IN 2 BOXES -->
+                    <section class="row mb-4">
+                        <!-- Box 1: Outcome Utama -->
+                        <div class="col-md-6 mb-3">
+                            <div class="card shadow-sm h-100 border-primary">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="feature-icon me-3">
+                                            <i class="fas fa-trophy"></i>
+                                        </div>
+                                        <h5 class="card-title mb-0 text-primary">Outcome Utama</h5>
+                                    </div>
+                                    <p class="card-text">
+                                        Melalui kursus ini, pelajar diharap dapat meningkatkan keupayaan 
+                                        penyelesaian masalah secara kreatif dan kolaboratif ke arah melahirkan 
+                                        graduan yang kompeten dan berdaya saing tinggi.
+                                    </p>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2">
+                                            <i class="fas fa-check-circle text-success me-2"></i>
+                                            Sistem atau aplikasi berfungsi penuh
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="fas fa-check-circle text-success me-2"></i>
+                                            Dokumentasi projek yang lengkap
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check-circle text-success me-2"></i>
+                                            Pembentangan dan demonstrasi projek
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Box 2: Nilai Tambah -->
+                        <div class="col-md-6 mb-3">
+                            <div class="card shadow-sm h-100 border-success">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="feature-icon me-3" style="background: linear-gradient(135deg, #198754 0%, #20c997 100%);">
+                                            <i class="fas fa-plus-circle"></i>
+                                        </div>
+                                        <h5 class="card-title mb-0 text-success">Nilai Tambah</h5>
+                                    </div>
+                                    <p class="card-text">
+                                        Sepanjang pelaksanaan Projek Akhir, pelajar akan membangunkan 
+                                        kemahiran tambahan yang berharga untuk kerjaya masa depan.
+                                    </p>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2">
+                                            <i class="fas fa-star text-warning me-2"></i>
+                                            Kemahiran teknikal terkini
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="fas fa-star text-warning me-2"></i>
+                                            Pengalaman kerja industri
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-star text-warning me-2"></i>
+                                            Portfolio projek profesional
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- FLOW / TIMELINE / PROCESS -->
+                    <section class="card shadow-sm mb-4">
+                        <div class="card-header bg-dark text-white">
+                            <i class="fas fa-project-diagram me-2"></i>Carta Alir Pelaksanaan Projek
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-primary mb-3">
+                                Carta Alir Pelaksanaan Projek
+                            </h5>
+                            <p class="card-text mb-4">
+                                Pelaksanaan Projek Akhir perlu mematuhi proses dan prosedur yang telah 
+                                ditetapkan dalam kurikulum program. Carta alir pelaksanaan menunjukkan 
+                                gambaran keseluruhan aliran kerja Projek Akhir sepanjang semester.
+                            </p>
+                            
+                            <!-- Process Timeline -->
+                            <div class="row g-3">
+                                <div class="col-md-3 col-6">
+                                    <div class="text-center p-3 bg-light rounded">
+                                        <div class="feature-icon mx-auto mb-2" style="width: 50px; height: 50px; font-size: 1.25rem;">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                        <h6 class="mb-1">Minggu 1-2</h6>
+                                        <small class="text-muted">Pendaftaran & Pemilihan Tajuk</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <div class="text-center p-3 bg-light rounded">
+                                        <div class="feature-icon mx-auto mb-2" style="width: 50px; height: 50px; font-size: 1.25rem;">
+                                            <i class="fas fa-search"></i>
+                                        </div>
+                                        <h6 class="mb-1">Minggu 3-5</h6>
+                                        <small class="text-muted">Kajian Literatur</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <div class="text-center p-3 bg-light rounded">
+                                        <div class="feature-icon mx-auto mb-2" style="width: 50px; height: 50px; font-size: 1.25rem;">
+                                            <i class="fas fa-cogs"></i>
+                                        </div>
+                                        <h6 class="mb-1">Minggu 6-10</h6>
+                                        <small class="text-muted">Pembangunan</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <div class="text-center p-3 bg-light rounded">
+                                        <div class="feature-icon mx-auto mb-2" style="width: 50px; height: 50px; font-size: 1.25rem;">
+                                            <i class="fas fa-presentation"></i>
+                                        </div>
+                                        <h6 class="mb-1">Minggu 11-14</h6>
+                                        <small class="text-muted">Pembentangan</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Flowchart Image -->
+                            <div class="text-center mt-4 p-4 bg-light rounded">
+                                <img src="C:\Users\Fadhli\Downloads\UPROP_Website\flowchart.png" alt="Carta Alir Pelaksanaan Projek" 
+                                class="img-fluid mb-3" style="max-height: 500px; border-radius: 8px;">
+                                <p class="text-muted">Carta Alir Pelaksanaan Projek (Gambar/Rajah)</p>
+                                    <i class="fas fa-download me-2"></i>Muat Turun Carta Alir Penuh
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5><i class="fas fa-university me-2"></i>Politeknik Seberang Perai</h5>
+                    <p class="mb-0 text-muted">
+                        Jalan Permatang Pauh<br>
+                        13500 Permatang Pauh<br>
+                        Pulau Pinang, Malaysia
+                    </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5><i class="fas fa-address-card me-2"></i>Hubungi Kami</h5>
+                    <p class="mb-0 text-muted">
+                        <i class="fas fa-phone me-2"></i>04-5383322<br>
+                        <i class="fas fa-envelope me-2"></i>ukk@psp.edu.my<br>
+                        <i class="fas fa-globe me-2"></i>www.psp.edu.my
+                    </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5><i class="fas fa-share-alt me-2"></i>Ikuti Kami</h5>
+                    <a href="#" class="text-muted me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-muted me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-muted me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-muted"><i class="fab fa-youtube fa-lg"></i></a>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <p class="mb-0 text-center text-muted">
+                &copy; 2026 - Hak Cipta Terpelihara | Jabatan Teknologi Maklumat dan Komunikasi Politeknik Seberang Perai
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
